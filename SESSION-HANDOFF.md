@@ -17,7 +17,7 @@ The server is deployed, live, and the rename is essentially complete. On June 8,
 - **Storage:** Railway PostgreSQL with full-text search and GIN-indexed tags; migrations run on startup.
 - **Deployment:** Railway project **"Website Ideas"**, service **`website-ideas`**. Auto-deploys from `Above-Public-Affairs/website-ideas` on push to `main`. **Live URL:** `https://build-library-mcp-production.up.railway.app` (the original generated domain, kept on purpose — a service rename doesn't change it).
 - **Distribution:** Organization Connector in claude.ai, available to the team across Chat, Cowork, and web.
-- **Error reporting:** wired via `canter-error-reporter`.
+- **Error reporting:** wired via `@above-public-affairs/error-reporter`.
 
 ## Environment variables
 

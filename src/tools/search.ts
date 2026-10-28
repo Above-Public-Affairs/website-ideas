@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import { reportError } from "canter-error-reporter";
+import { reportError } from "@above-public-affairs/error-reporter";
 import type { DatabaseClient } from "../db/client.js";
 import type { Bookmark } from "../types/index.js";
 

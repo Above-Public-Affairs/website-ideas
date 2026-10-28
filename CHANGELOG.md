@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026-10-28]
+
+### Changed
+- Error reporting now uses `@above-public-affairs/error-reporter` 0.2 (replaces `canter-error-reporter`): records the running release at startup and waits for reports to send before exit.
+
 ## [2026-06-17]
 
 ### Added

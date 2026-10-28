@@ -21,6 +21,7 @@ import express from "express";
 import { DatabaseClient } from "./db/client.js";
 import { runMigrations } from "./db/migrate.js";
 import { createServer } from "./server.js";
+import { initErrorReporter } from "@above-public-affairs/error-reporter";
 
 // CRITICAL: Never use console.log() — it corrupts JSON-RPC on stdout
 // Always use console.error() for any logging/debugging
@@ -128,6 +129,8 @@ async function startStdioServer(): Promise<void> {
 }
 
 async function main(): Promise<void> {
+  initErrorReporter({ project: "website-ideas" });
+
   process.on("SIGTERM", async () => {
     console.error("Received SIGTERM, shutting down...");
     if (db) await db.close();
